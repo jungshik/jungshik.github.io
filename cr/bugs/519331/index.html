@@ -1,0 +1,50 @@
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+  <title>Chrome Bug 519331</title>
+  <style>
+  @font-face {
+    font-family: NotoSansKR1002;
+    src: url(NotoSansKR-Regular-1002.otf);
+  }
+  @font-face {
+    font-family: NotoSansKR1004;
+    src: url(NotoSansKR-Regular-1004.otf);
+  }
+  .tinput {
+    /* display: inline; */
+    width: 358px;
+    height: 18px; 
+    font-size:  16px;
+    line-height: 18px;
+    border: 0px none;
+    background-color: #a0a0f0;
+    outline: black dotted thin;
+  }
+
+  .f1002 {
+    font-family: NotoSansKR1002;
+  }
+  .f1004 {
+    font-family: NotoSansKR1004;
+  }
+  </style>
+  </head>
+  <body lang="ko">
+    <form>
+      <ul>
+        <li>Noto Sans CJK 1.004:
+          <input class="tinput f1004" type="text" size="55" value="Agpq 한글">
+        </li>
+        <li>Noto Sans CJK 1.002: 
+          <input class="tinput f1002" type="text" size="55" value="Agpq 한글">
+        </li>
+      </ul>
+    </form>
+    <ul>
+      <li>Noto Sans CJK 1.004: <span class="tinput f1004">abcfpq 한글은</span> </li>
+      <li>Noto Sans CJK 1.002: <span class="tinput f1002">abcfpq 한글은</span></li>
+    </ul>
+  </body>
+</html>
+
