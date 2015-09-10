@@ -11,6 +11,10 @@
     font-family: NotoSansKR1004;
     src: url(NotoSansKR-Regular-1004.otf);
   }
+  @font-face {
+    font-family: NotoSansKR1004var;
+    src: url(NotoSansKR-Regular-1004_1002metric.otf);
+  }
   .tinput {
     /* display: inline; */
     width: 358px;
@@ -28,6 +32,9 @@
   .f1004 {
     font-family: NotoSansKR1004;
   }
+  .f1004var {
+    font-family: NotoSansKR1004var;
+  }
 
   .ilb {
     display: inline-block;
@@ -43,6 +50,9 @@
         <li>Noto Sans CJK 1.004:
           <input class="tinput f1004" type="text" size="55" value="Agpq 한글">
         </li>
+        <li>Noto Sans CJK 1.004 w/ 1.002 metric:
+          <input class="tinput f1004var" type="text" size="55" value="Agpq 한글">
+        </li>
         <li>Noto Sans CJK 1.002: 
           <input class="tinput f1002" type="text" size="55" value="Agpq 한글">
         </li>
@@ -52,6 +62,7 @@
     <h3>Div element</h3>
     <ul>
       <li>Noto Sans CJK 1.004: <div class="tinput f1004 ilb">Agpq 한글은</div> </li>
+      <li>Noto Sans CJK 1.004 w/ 1.002 metric: <div class="tinput f1004var ilb">Agpq 한글은</div> </li>
       <li>Noto Sans CJK 1.002: <div class="tinput f1002 ilb">Agpq 한글은</div></li>
     </ul>
   </body>
