@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 100;
+  src:
+    url('NotoSansSC-Thin-subset_l1_2_3_desub.woff2');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 300;
+  src:
+    url('NotoSansSC-Light-subset_l1_2_3_desub.woff2');
+}
+
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 400;
+  src:
+    url('NotoSansSC-Regular-subset_l1_2_3_desub.woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 500;
+  src:
+    url('NotoSansSC-Medium-subset_l1_2_3_desub.woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 700;
+  src:
+    url('NotoSansSC-Bold-subset_l1_2_3_desub.woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-weight: 900;
+  src:
+    url('NotoSansSC-Black-subset_l1_2_3_desub.woff2');
+}
+
+/* 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+/* 
+ * @import
+ * url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic-ext,greek,greek-ext,vietnamese,latin-ext,cyrillic);
+ */
+

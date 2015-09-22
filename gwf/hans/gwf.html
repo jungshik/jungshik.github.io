@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="hans_gwf.test.css">
+    <script>
+      function readFontOption(id) {
+        var sel = document.getElementById(id);
+        var i = sel.selectedIndex;
+        return sel.options[i].value;
+      }
+
+      function setFont(id) {
+        var ko_font = readFontOption("family");
+        var latin_font = readFontOption("latfont");
+/* 
+        var isBold = document.getElementById("isBold").checked;
+        var weight = 'normal';
+*/
+        var weight = document.getElementById("weight").value;
+        var n = document.getElementById(id);
+        n.style.fontFamily = latin_font == "" ? ko_font : latin_font + "," + ko_font;
+        n.style.fontWeight = weight;
+      }
+      function addText(p, sampleId) {
+        var text = document.getElementById(sampleId).value;
+        var div = document.createElement("div");
+        for (s = 10; s < 37; s++) {
+          var idiv = document.createElement("div");
+          var span1 = document.createElement("span");
+          //span1.style.display = "inline-block";
+          //span1.style.witdh = "150 px";
+          span1.innerHTML = s + "px : ";
+          var span2 = document.createElement("span");
+          span2.innerHTML = text;
+          idiv.appendChild(span1);
+          idiv.appendChild(span2);
+          idiv.style.fontSize = s + "px";
+          idiv.style.lineHeight = s * 1.7 + "px";
+          div.appendChild(idiv);
+        }
+        p.appendChild(div);
+      }
+
+      function setText(p) {
+        var n = document.getElementById(p);
+        while (n.firstChild) {
+          n.removeChild(n.firstChild);
+        }
+        addText(n, "sample");
+      }
+      function start() {
+        setFont("test");
+        setText("test");
+      }
+    </script>
+  </head>
+  <body onload="start()">
+    <h1>Korean Font Test</h1>
+    <form id="f">
+      <ul>
+      <li>Font for Hans
+      <select id="family" onchange='setFont("test")'>
+        <option selected>Noto Sans SC</option>
+      </select>
+      </li>
+      <li>Font family for Latin/ASCII:
+      <select id="latfont" onchange='setFont("test")'>
+        <option>Roboto</option>
+        <option selected>Noto Sans</option>
+        <option value="">Use Korean font</option>
+      </select>
+      </li>
+      <li>Weight:
+      <select id="weight" onchange='setFont("test")'>
+         <option value="100">Thin</option>
+         <option value="300">Light</option>
+         <option selected value="400">Regular</option>
+         <option value="500">Meidum</option>
+         <option value="700">Bold</option>
+         <option value="900">Heavy</option>
+      </select>
+      </li>
+<!--
+      <li>
+      <input onchange='setFont("test")' type="checkbox" id="isBold">Bold</input>
+      </li>
+-->
+      </ul>
+      Type sample text here:<br>
+      <textarea id="sample" rows="3" cols="150"
+        oninput='setText("test")'>
+        以身为美国另类摇滚乐队小妖精的主音吉他手闻名。1993年乐队解散后，
+      </textarea>
+    </form>
+    <div id="test">
+    </div>
+  </body>
+</html>
