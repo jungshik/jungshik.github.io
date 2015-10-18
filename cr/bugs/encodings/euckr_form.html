@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <meta charset="euc-kr">
+  </head>
+  <body>
+    <p>The first character is U+6A02 and the second is U+F914. When
+    converted to EUC-KR, they should be "xE4 xC5" and "xD1 x%E2", respectively.
+    Press the submit button and see what's in the query parameter. It should
+    read <b>%E4%C5%D1%E2</b>.
+    <form action="test.cgi" method="get">
+      <input type="text" name="hanja" value="樂樂"></input>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
