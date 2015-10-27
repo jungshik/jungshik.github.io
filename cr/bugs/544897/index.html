@@ -1,0 +1,76 @@
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+  <title>Chrome Bug 544897</title>
+  <style>
+  @font-face {
+    font-family: Arimo123
+    src: url(Arimo-123.ttf);
+  }
+  @font-face {
+    font-family: Arimo130;
+    src: url(Arimo-130.ttf);
+  }
+  /*
+  @font-face {
+    font-family: Arimo130var;
+    src: url(Arimo-130var.ttf);
+  }
+  */
+  .tinput {
+    /* display: inline; */
+    width: 358px;
+    height: 18px;
+    font-size:  16px;
+    line-height: 18px;
+    border: 0px none;
+    background-color: #a0a0f0;
+    outline: black dotted thin;
+  }
+
+  .f123 {
+    font-family: Arimo123;
+  }
+  .f130 {
+    font-family: Arimo130;
+  }
+  .f130var {
+    font-family: Arimo130var;
+  }
+
+  .ilb {
+    display: inline-block;
+  }
+
+  li { margin-top: 15px; margin-bottom: 15px; }
+  </style>
+  </head>
+  <body lang="en">
+    <h3>input type=text</h3>
+    <form>
+      <ul>
+        <li>Arimo 1.30:
+          <input class="tinput f130" type="text" size="55" value="AgpqsHçÇ">
+        </li>
+        <!--
+        <li>Noto Sans CJK 1.004 w/ 1.002 metric:
+          <input class="tinput f130var" type="text" size="55" value="AgpqsHçÇ">
+        </li>
+        -->
+        <li>Arimo 1.23:
+          <input class="tinput f123" type="text" size="55" value="AgpqsHçÇ">
+        </li>
+      </ul>
+    </form>
+
+    <h3>Div element</h3>
+    <ul>
+      <li>Arimo 1.30: <div class="tinput f130 ilb">AgpqsHçÇ</div> </li>
+      <!--
+      <li>Arimo 1.30 with 1.23 metric: <div class="tinput f130var ilb">AgpqsHçÇ</div> </li>
+      -->
+      <li>Arimo 1.23: <div class="tinput f123 ilb">AgpqsHçÇ</div></li>
+    </ul>
+  </body>
+</html>
+
