@@ -2,20 +2,43 @@
   <head>
     <title>Arimo and Tinos Height</title>
     <style>
-    #arimo {
+    .arimo {
       font-family: Arial, sans-serif;
       font-size: 16px;
     }
 
-    #tinos {
-      font-family: Times New Roman, sans-serif;
+    .tinos {
+      font-family: Times New Roman, serif;
       font-size: 16px;
     }
     </style>
+    <script>
+    function getHeight(id) {
+      return document.getElementById(id).clientHeight;
+    }
+    function printHeight() {
+      var results = "arimo: " + getHeight("a1") + "," +
+                              + getHeight("a2") + "," +
+                              + getHeight("a3") + "," +
+                              + getHeight("a4") + " " +
+                    "tinos: " + getHeight("t1") + "," +
+                              + getHeight("t2") + "," +
+                              + getHeight("t3") + "," +
+                              + getHeight("t4");
+      document.getElementById("result").appendChild(document.createTextNode(results));
+    }
+    </script>
   </head>
-  <body>
-    <div id="arimo">Abcdqrg</div>
-    <div id="tinos">Abcdqrg</div>
+  <body onload="printHeight();">
+    <div id="a1" class="arimo">Abcdqrg</div>
+    <div id="a2" class="arimo" style="font-weight: bold">Abcdqrg</div>
+    <div id="a3" class="arimo" style="font-style: italic">Abcdqrg</div>
+    <div id="a4" class="arimo" style="font-weight: bold; font-style: italic">Abcdqrg</div>
+    <div id="t1" class="tinos">Abcdqrg</div>
+    <div id="t2" class="tinos" style="font-weight: bold">Abcdqrg</div>
+    <div id="t3" class="tinos" style="font-style: italic">Abcdqrg</div>
+    <div id="t4" class="tinos" style="font-weight: bold; font-style: italic">Abcdqrg</div>
+    <div id="result"></div>
   </body>
 </html>
 
