@@ -6,7 +6,9 @@
 <title>navigator.language</title>
 <script>
 function navlang() {
-  alert ("navigator.language=" + window.navigator.language);
+  s1 = "navigator.language=" + window.navigator.language + "\n";
+  s2 = "(new Date).toLocaleString()" + (new Date).toLocaleString();
+  alert (s1 + s2);
 }
 </script>
 </head>
