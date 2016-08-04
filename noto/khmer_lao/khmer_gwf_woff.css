@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Noto Sans Khmer UI';
+  
+font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans Khmer UI'), local('NotoSansKhmerUI'),
+ url(http://fonts.gstatic.com/s/notosanskhmerui/v3/0rjwx0btuOYzXBYCG5gOCInGz28xlOuTNSZ3x3iu7oY.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans Khmer UI';
+  font-style: normal;
+  font-weight: 700;
+  
+src: local('Noto Sans Khmer UI Bold'), local('NotoSansKhmerUI-Bold'),
+ url(http://fonts.gstatic.com/s/notosanskhmerui/v3/j-wOJFqovcecGOiFUUGIzPsC7rkW8BJC4hkuBVfdnkQ.woff) format('woff');
+}
+
