@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Roboto_GWF;
+  font-weight: 100;
+  url: src(Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family: Roboto_GWF;
+  font-weight: 300;
+  url: src(Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: Roboto_GWF;
+  font-weight: 400;
+  url: src(Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto_GWF;
+  font-weight: 500;
+  url: src(Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: Roboto_GWF;
+  font-weight: 700;
+  url: src(Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto_GWF;
+  font-weight: 900;
+  url: src(Roboto-Black.ttf);
+}
