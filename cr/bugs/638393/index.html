@@ -8,18 +8,21 @@
 @import 'gwf/roboto.css';
 @import '2.132/roboto.css';
 
-.local {
+td:nth-child(2) {
   font-family: Roboto;
 }
 
-.web2132 {
+td:nth-child(3) {
   font-family: Roboto_2132;
 }
 
-.gwf {
+td:nth-child(4) {
   font-family: Roboto_GWF;
 }
 
+.thin {
+  font-weight: 100;
+}
 .light {
   font-weight: 300;
 }
@@ -32,34 +35,58 @@
 .bold {
   font-weight: 700;
 }
+.black {
+  font-weight: 900;
+}
 
-div ul { font-size: 13px;}
+tr > td {font-size: 13px;}
 </style>
 </head>
 <body>
-  <div class="local">Roboto 2.132 (local font)
-    <ul>
-      <li class="light"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="regular"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="medium"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="bold"> CLEAR OPEN DOWNLOAD FOLDER</li>
-    </ul>
-  </div>
-  <div class="web2132">Roboto 2.132 (web font)
-    <ul>
-      <li class="light"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="regular"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="medium"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="bold"> CLEAR OPEN DOWNLOAD FOLDER</li>
-    </ul>
-  </div>
-  <div class="gwf">Roboto 1.x (web font: Google Web Font version)
-    <ul>
-      <li class="light"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="regular"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="medium"> CLEAR OPEN DOWNLOAD FOLDER</li>
-      <li class="bold"> CLEAR OPEN DOWNLOAD FOLDER</li>
-    </ul>
+  <table>
+    <tr>
+      <th>Weight/Font</th>
+      <th>2.132 (local)</th>
+      <th>2.132 (web font)</th>
+      <th>GWF (web font)</th>
+    </tr>
+    <tr class="thin">
+      <th>Thin</th>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+    </tr>
+    <tr class="light">
+      <th>Light</th>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+    </tr>
+    <tr class="regular">
+      <th>Regular</th>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+    </tr>
+    <tr class="medium">
+      <th>Medium</th>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+    </tr>
+    <tr class="bold">
+      <th>Bold</th>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+    </tr>
+    <tr class="black">
+      <th>Black</th>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+      <td>CLEAR OPEN DOWNLOAD FOLDER</td>
+    </tr>
+  </table>
   </div>
 </body>
 </html>
