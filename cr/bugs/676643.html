@@ -1,0 +1,33 @@
+<html>
+<head><meta charset="utf-8">
+<script>
+function addItem(text, p) {
+  var item = document.createElement("li");
+  item.textContent = text;
+  p.appendChild(item);
+}
+
+function start() {
+   var list = document.createElement("ol");
+   var s="IijÌÍìíkAbc\u0130\u0131\u03ac\u03ad";
+   addItem("input: " + s, list);
+   addItem("Upp(): " + s.toUpperCase(), list);
+   addItem("Low(): " + s.toLowerCase(), list);
+   addItem("LocUpp(en): " + s.toLocaleUpperCase("en"), list);
+   addItem("LocLow(en): " + s.toLocaleLowerCase("en"), list);
+   addItem("LocUpp(): " + s.toLocaleUpperCase(), list);
+   addItem("LocLow(): " + s.toLocaleLowerCase(), list);
+   addItem("LocUpp(el): " + s.toLocaleUpperCase("el"), list);
+   addItem("LocLow(el): " + s.toLocaleLowerCase("el"), list);
+   addItem("LocUpp(tr): " + s.toLocaleUpperCase("tr"), list);
+   addItem("LocLow(tr): " + s.toLocaleLowerCase("tr"), list);
+   addItem("LocUpp(lt): " + s.toLocaleUpperCase("lt"), list);
+   addItem("LocLow(lt): " + s.toLocaleLowerCase("lt"), list);
+   list.style.fontSize = "24px";
+   document.body.appendChild(list);
+}
+</script>
+</head>
+<body onload="start()">
+</body>
+</html>
