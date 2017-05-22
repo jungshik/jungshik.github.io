@@ -34,6 +34,9 @@ function start() {
    addItem("shortMonth: " + shortMonth(date1) + " -- " + shortMonth(date2), list);
    addItem("Intl datetime with local tz: " + dt_tz(date1) + " -- " + dt_tz(date2), list);
    addItem("Intl datetime with UTC: " + dt_tz(date1, "UTC") + " -- " + dt_tz(date2, "UTC"), list);
+   addItem("Intl datetime with tz = Sydney: " + dt_tz(date1, "Australia/Sydney") + " -- " + dt_tz(date2, "Australia/Sydney"), list);
+   addItem('Intl.DateTimeFormat("en-US").resolvedOptions().timeZone: ' +
+       Intl.DateTimeFormat("en-US").resolvedOptions().timeZone);
    list.style.fontSize = "20px";
    document.getElementById("output").appendChild(list);
 }
