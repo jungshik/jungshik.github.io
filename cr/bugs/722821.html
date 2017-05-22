@@ -29,6 +29,8 @@ function start() {
    addItem("toString: " + date1 + " -- " + date2, list);
    addItem("getMonth: " + date1.getMonth() + " -- " + date2.getMonth(), list);
    addItem("getUTCMonth: " + date1.getUTCMonth() + " -- " + date2.getUTCMonth(), list);
+   addItem("valueOf/1000/3600: " + date1.valueOf() / 1000/3600 + " -- " + date2.valueOf() / 1000/3600, list);
+   addItem("Delta valueOf/1000/3600: " + (date1.valueOf() / 1000 - date2.valueOf() / 1000) / 3600, list);
    addItem("shortMonth: " + shortMonth(date1) + " -- " + shortMonth(date2), list);
    addItem("Intl datetime with local tz: " + dt_tz(date1) + " -- " + dt_tz(date2), list);
    addItem("Intl datetime with UTC: " + dt_tz(date1, "UTC") + " -- " + dt_tz(date2, "UTC"), list);
@@ -37,8 +39,9 @@ function start() {
 }
 </script>
 </head>
-<body onload="start()">
+<+body onload="start()">
   <h1>Test for <a href="https://crbug.com/722821">crbug.com/722821.html</a></h1>
+
   <div id="output">
   </div>
 </body>
