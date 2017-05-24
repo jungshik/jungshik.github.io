@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- DO NOT SUBMIT: Fix Page Title. Missing tags? http://go/optional-html -->
+<title>CrBug 720030: AvailableLocale</title>
+
+<script>
+function addItem(text, p) {
+  var item = document.createElement("li");
+  item.textContent = text;
+  p.appendChild(item);
+}
+
+function start() {
+   var list = document.createElement("ol");
+   addItem("Intl.DateTimeFormat().resolvedOptions().locale" +
+           Intl.DateTimeFormat().resolvedOptions().locale, list);
+   addItem("Intl.NumberFormat().resolvedOptions().locale" +
+           Intl.NumberFormat().resolvedOptions().locale, list);
+   addItem("Intl.Collator().resolvedOptions().locale" +
+           Intl.Collator().resolvedOptions().locale, list);
+   list.style.fontSize = "20px";
+   document.getElementById("output").appendChild(list);
+}
+</script>
+</head>
+<body onload="start()">
+  <h1>Test for <a href="https://crbug.com/720030">crbug.com/720030.html</a></h1>
+
+  <div id="output">
+  </div>
+</body>
+</html>
+
+
