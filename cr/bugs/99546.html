@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>v8 Date Test</title>
+<script>
+function addItem(text, p) {
+  var item = document.createElement("li");
+  item.textContent = text;
+  p.appendChild(item);
+}
+
+function start() {
+   var list = document.createElement("ol");
+   var date = new Date(2017, 5, 21, 14);
+   addItem("toString: " + date, list);
+   addItem("toLocaleString() " + date.toLocaleString(), list);
+   addItem("toLocaleString('en-US') " + date.toLocaleString("en-US"), list);
+   addItem("toLocaleString('en-GB') " + date.toLocaleString("en-GB"), list);
+   addItem("toLocaleString('en-AU') " + date.toLocaleString("en-AU"), list);
+   addItem("toLocaleString('en-CA') " + date.toLocaleString("en-CA"), list);
+   addItem("toLocaleString('en-NZ') " + date.toLocaleString("en-NZ"), list);
+   addItem("navigator.language=" + window.navigator.language);
+   document.getElementById("output").appendChild(list);
+}
+</script>
+</head>
+<body onload="start()">
+  <h1>Test for <a href="https://crbug.com/99546">crbug.com/99546.html</a></h1>
+
+  <div id="output">
+  </div>
+</body>
+</html>
