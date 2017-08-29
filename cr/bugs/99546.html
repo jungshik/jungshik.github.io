@@ -18,7 +18,8 @@ function start() {
    addItem("toLocaleString('en-AU') " + date.toLocaleString("en-AU"), list);
    addItem("toLocaleString('en-CA') " + date.toLocaleString("en-CA"), list);
    addItem("toLocaleString('en-NZ') " + date.toLocaleString("en-NZ"), list);
-   addItem("navigator.language=" + window.navigator.language);
+   addItem("navigator.language= " + window.navigator.language, list);
+   list.style.fontSize = "20px";
    document.getElementById("output").appendChild(list);
 }
 </script>
