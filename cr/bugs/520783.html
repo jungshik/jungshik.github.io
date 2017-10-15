@@ -44,7 +44,7 @@ function check() {
        Intl.DateTimeFormat("en-US").resolvedOptions().timeZone, list);
    list.style.fontSize = "20px";
    var output = document.getElementById("output");
-   output.replaceChild(output.firstChild, list);
+   output.replaceChild(list, output.firstChild);
 }
 </script>
 </head>
