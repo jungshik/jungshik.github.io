@@ -11,21 +11,21 @@ function addItem(text, p) {
 }
 
 function runtest() {
-  var t0 = new Date();
+  var t0 = Date.now();
   var date = new Date("1/1/2007 1:11:11");
-  var t1 = new Date();
+  var t1 = Date.now();
   for (i = 0; i < 500; ++i) {
       var shortFormat = date.formatDate("Y-m-d");
       var longFormat = date.formatDate("l, F d, Y g:i:s A");
       date.setTime(date.getTime() + 84266956);
   }
-  var t2 = new Date();
+  var t2 = Date.now();
 
 
   var list = document.createElement("ol");
-  addItem("t1 - t0 = " + t1.getTime() - t0.getTime() + " ms", list);
-  addItem("t2 - t1 = " + t2.getTime() - t1.getTime() + " ms", list);
-  addItem("t2 - t0 = " + t2.getTime() - t0.getTime() + " ms", list);
+  addItem("t1 - t0 = " + (t1 - t0) + " ms", list);
+  addItem("t2 - t1 = " + (t2 - t1) + " ms", list);
+  addItem("t2 - t0 = " + (t2 - t0) + " ms", list);
   document.getElementById("result").appendChild(list);
 }
 </script>
