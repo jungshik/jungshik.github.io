@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- DO NOT SUBMIT: Fix Page Title. Missing tags? http://go/optional-html -->
+<script src="sunspider-date-format-tofte.js">
+<script>
+function addItem(text, p) {
+  var item = document.createElement("li");
+  item.textContent = text;
+  p.appendChild(item);
+}
+
+function runtest() {
+  var t0 = new Date();
+  var date = new Date("1/1/2007 1:11:11");
+  var t1 = new Date();
+  for (i = 0; i < 500; ++i) {
+      var shortFormat = date.formatDate("Y-m-d");
+      var longFormat = date.formatDate("l, F d, Y g:i:s A");
+      date.setTime(date.getTime() + 84266956);
+  }
+  var t2 = new Date();
+
+
+  var list = document.createElement("ol");
+  addItem("t1 - t0 = " + t1.getTime() - t0.getTime() + " ms", list);
+  addItem("t2 - t1 = " + t2.getTime() - t1.getTime() + " ms", list);
+  addItem("t2 - t0 = " + t2.getTime() - t0.getTime() + " ms", list);
+  document.getElementById("result").appendChild(list);
+}
+</script>
+<title>Sunspider date-format-tofte</title>
+<body onload="runtest">
+<h1>Sunspider date-format-tofte</h1>
+<div id="result"></div>
+
