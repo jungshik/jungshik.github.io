@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Android generic family test</title>
+<style>
+td:nth-child(2) { font-family: sans-serif;}
+td:nth-child(3) { font-family: serif;}
+td:nth-child(4) { font-family: system-ui;}
+</style>
+</head>
+<body>
+  <h1>Generic font family test</h1>
+
+  <h2>Without lang specified</h2>
+  <table>
+    <tr><th>Lang</th><th>sans-serif</th><th>serif</th><th>system-ui</th></tr>
+    <tr><td>English</td>
+      <td>Albert Einstein</td>
+      <td>Albert Einstein</td>
+      <td>Albert Einstein</td>
+    </tr>
+    <tr><td>Greek</td>
+      <td>Άλμπερτ Αϊνστάιν</td>
+      <td>Άλμπερτ Αϊνστάιν</td>
+      <td>Άλμπερτ Αϊνστάιν</td>
+    </tr>
+    <tr><td>Russian</td>
+      <td>Эйнштейн, Альберт</td>
+      <td>Эйнштейн, Альберт</td>
+      <td>Эйнштейн, Альберт</td>
+    </tr>
+    <tr><td>Armenian</td>
+      <td>Ալբերտ Այնշտայն</td>
+      <td>Ալբերտ Այնշտայն</td>
+      <td>Ալբերտ Այնշտայն</td>
+    </tr>
+    <tr><td>Georgian</td>
+      <td>ႠႡႢႣ  აk</td>
+      <td>ႠႡႢႣ  აk</td>
+      <td>ႠႡႢႣ  აk</td>
+    </tr>
+    <tr><td>Hindi</td>
+      <td>अल्बर्ट आइंस्टीन</td>
+      <td>अल्बर्ट आइंस्टीन</td>
+      <td>अल्बर्ट आइंस्टीन</td>
+    </tr>
+    <tr><td>Thai</td>
+      <td>อัลเบิร์ต ไอน์สไตน์</td>
+      <td>อัลเบิร์ต ไอน์สไตน์</td>
+      <td>อัลเบิร์ต ไอน์สไตน์</td>
+    </tr>
+    <tr><td>Arabic</td>
+      <td>ألبرت أينشتاين</td>
+      <td>ألبرت أينشتاين</td>
+      <td>ألبرت أينشتاين</td>
+    </tr>
+    <tr><td>Korean</td>
+      <td>알버트 아인시타인</td>
+      <td>알버트 아인시타인</td>
+      <td>알버트 아인시타인</td>
+    </tr>
+    <tr><td>Chinese (Simp)</td>
+      <td>阿尔伯特·爱因斯坦</td>
+      <td>阿尔伯特·爱因斯坦</td>
+      <td>阿尔伯特·爱因斯坦</td>
+    </tr>
+    <tr><td>Chinese (Trad)</td>
+      <td>阿爾伯特·愛因斯坦</td>
+      <td>阿爾伯特·愛因斯坦</td>
+      <td>阿爾伯特·愛因斯坦</td>
+    </tr>
+    <tr><td>Japanese</td>
+      <td>アルフレート・アインシュタイン</td>
+      <td>アルフレート・アインシュタイン</td>
+      <td>アルフレート・アインシュタイン</td>
+    </tr>
+  </table>
+
+  <h2>With lang specified</h2>
+  <table>
+    <tr><th>Lang</th><th>sans-serif</th><th>serif</th><th>system-ui</th></tr>
+    <tr lang="en"><td>English</td>
+      <td>Albert Einstein</td>
+      <td>Albert Einstein</td>
+      <td>Albert Einstein</td>
+    </tr>
+    <tr lang="el"><td>Greek</td>
+      <td>Άλμπερτ Αϊνστάιν</td>
+      <td>Άλμπερτ Αϊνστάιν</td>
+      <td>Άλμπερτ Αϊνστάιν</td>
+    </tr>
+    <tr lang="ru"><td>Russian</td>
+      <td>Эйнштейн, Альберт</td>
+      <td>Эйнштейн, Альберт</td>
+      <td>Эйнштейн, Альберт</td>
+    </tr>
+    <tr lang="hy"><td>Armenian</td>
+      <td>Ալբերտ Այնշտայն</td>
+      <td>Ալբերտ Այնշտայն</td>
+      <td>Ալբերտ Այնշտայն</td>
+    </tr>
+    <tr lang="ka"><td>Georgian</td>
+      <td>ალბერტ აინშტაინი</td>
+      <td>ალბერტ აინშტაინი</td>
+      <td>ალბერტ აინშტაინი</td>
+    </tr>
+    <tr lang="hi"><td>Hindi</td>
+      <td>अल्बर्ट आइंस्टीन</td>
+      <td>अल्बर्ट आइंस्टीन</td>
+      <td>अल्बर्ट आइंस्टीन</td>
+    </tr>
+    <tr lang="th"><td>Thai</td>
+      <td>อัลเบิร์ต ไอน์สไตน์</td>
+      <td>อัลเบิร์ต ไอน์สไตน์</td>
+      <td>อัลเบิร์ต ไอน์สไตน์</td>
+    </tr>
+    <tr lang="ar"><td>Arabic</td>
+      <td>ألبرت أينشتاين</td>
+      <td>ألبرت أينشتاين</td>
+      <td>ألبرت أينشتاين</td>
+    </tr>
+    <tr lang="ko"><td>Korean</td>
+      <td>알버트 아인시타인</td>
+      <td>알버트 아인시타인</td>
+      <td>알버트 아인시타인</td>
+    </tr>
+    <tr lang="zh-Hans"><td>Chinese (Simp)</td>
+      <td>阿尔伯特·爱因斯坦</td>
+      <td>阿尔伯特·爱因斯坦</td>
+      <td>阿尔伯特·爱因斯坦</td>
+    </tr>
+    <tr lang="zh-Hant"><td>Chinese (Trad)</td>
+      <td>阿爾伯特·愛因斯坦</td>
+      <td>阿爾伯特·愛因斯坦</td>
+      <td>阿爾伯特·愛因斯坦</td>
+    </tr>
+    <tr lang="ja"><td>Japanese</td>
+      <td>アルフレート・アインシュタイン</td>
+      <td>アルフレート・アインシュタイン</td>
+      <td>アルフレート・アインシュタイン</td>
+    </tr>
+  </table>
+</body>
+</html>
