@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- DO NOT SUBMIT: Fix Page Title. Missing tags? http://go/optional-html -->
+<title>Faux bold test</title>
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Naskh+Arabic+UI:400,700"
+      rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700"
+      rel="stylesheet">
+<script>
+function populate() {
+var arabic =
+  "\u0623\u0644\u0628\u0631\u062A \u0623\u064A\u0646\u0634\u062A\u0627\u064A\u0646"
+var latin = "Albert Einstein";
+var nodeArabic = document.createElement("span");
+var nodeLatin = document.createElement("span");
+var nodeArabicBold = document.createElement("b");
+var nodeLatinBold = document.createElement("b");
+nodeArabic.textContent = arabic;
+nodeArabicBold.textContent = arabic;
+nodeLatin.textContent = latin;
+nodeLatinBold.textContent = latin;
+var cellArabic = document.createElement("td");
+cellArabic.appendChild(nodeArabic);
+cellArabic.appendChild(nodeArabicBold);
+var cellLatin = document.createElement("td");
+cellLatin.appendChild(nodeLatin);
+cellLatin.appendChild(nodeLatinBold);
+
+var table = document.getElementById("out");
+for (size = 10; size <= 30; size++) {
+  var row = document.createElement("tr");
+  row.style.fontSize = size + "px";
+  var cell = document.createElement("th");
+  cell.textContent = size + "px";
+  row.appendChild(cell);
+  row.appendChild(cellArabic.cloneNode(true));
+  row.appendChild(cellLatin.cloneNode(true));
+  table.appendChild(row);
+}
+}
+</script>
+</head>
+<body onload="populate()">
+  <table id="out" style="font-family: Roboto, Noto Naskh Arabic UI">
+    <tr><th>size</th><th>Noto Naskh Arabic</th><th>Lato</th></tr>
+  </table>
+</body>
+</html>
