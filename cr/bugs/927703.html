@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>v8 Date Test</title>
+<script>
+function addItem(text, p) {
+  var item = document.createElement("li");
+  item.textContent = text;
+  p.appendChild(item);
+}
+
+function dt_tz(d, tz) {
+  return tz === undefined ? d.toLocaleString('en-US',
+      {timeZoneName: 'long', year: 'numeric', month: 'short',
+        day: 'numeric', hour: '2-digit', minute: '2-digit'}) :
+      d.toLocaleString('en-US', {timeZoneName: 'long',
+        year: 'numeric', month: 'short',
+        day: 'numeric', hour: '2-digit', minute: '2-digit',
+      timeZone: tz});
+}
+
+function check() {
+   var list = document.createElement("ol");
+   var date = new Date();
+   addItem("toString: " + date, list);
+   addItem("getTimezoneOffset: " + date.getTimezoneOffset(), list);
+   addItem("valueOf/1000/3600: " + date.valueOf() / 1000/3600, list);
+   addItem("Intl datetime with the default  timezone: " + dt_tz(date), list);
+   addItem('Intl.DateTimeFormat("en-US").resolvedOptions().timeZone: ' +
+       Intl.DateTimeFormat("en-US").resolvedOptions().timeZone, list);
+   addItem("Intl datetime with UTC: " + dt_tz(date, "UTC"), list);
+   addItem("Intl datetime with tz = Sydney: " + dt_tz(date, "Australia/Sydney"), list);
+   addItem("Intl datetime with tz = Adelaide: " + dt_tz(date, "Australia/Adelaide"), list);
+   addItem("Intl datetime with tz = Paris: " + dt_tz(date, "Europe/Paris"), list);
+   list.style.fontSize = "20px";
+   var output = document.getElementById("output");
+   output.replaceChild(list, output.firstChild);
+}
+</script>
+</head>
+<body onload="check()">
+  <h1>Test for <a href="https://crbug.com/927703">crbug.com/927703.html</a></h1>
+  <button onclick="check()">Recheck</button>
+  <div id="output"><ol></ol></div>
+</body>
+</html>
