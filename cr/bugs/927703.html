@@ -28,6 +28,7 @@ function check() {
    addItem('Intl.DateTimeFormat("en-US").resolvedOptions().timeZone: ' +
        Intl.DateTimeFormat("en-US").resolvedOptions().timeZone, list);
    addItem("Intl datetime with UTC: " + dt_tz(date, "UTC"), list);
+   addItem("Intl datetime with tz = Auckland: " + dt_tz(date, "Pacific/Aucklan"), list);
    addItem("Intl datetime with tz = Sydney: " + dt_tz(date, "Australia/Sydney"), list);
    addItem("Intl datetime with tz = Adelaide: " + dt_tz(date, "Australia/Adelaide"), list);
    addItem("Intl datetime with tz = Paris: " + dt_tz(date, "Europe/Paris"), list);
